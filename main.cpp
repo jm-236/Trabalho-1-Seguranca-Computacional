@@ -4,13 +4,9 @@
 using namespace std;
 
 int main() {
-    unsigned int chave_1 = 0b1000001101; // Exemplo de chave de 10 bits
-    unsigned int chave_2 = gerarChaveAleatoria(chave_1);
-    unsigned int chave_3 = gerarChaveAleatoria(chave_2);
-
-    cout << "Chave 1: " << chave_1 << endl;
-    cout << "Chave 2:" << chave_2 << endl;
-    cout << "Chave 3:" << chave_3 << endl;
+    bitset<10> chave_1 = 0b1000001101; // Exemplo de chave de 10 bits
+    
+    deslocarCircularMetades(chave_1);
     
     return 0;
 }
