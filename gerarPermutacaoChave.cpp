@@ -1,15 +1,33 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <random>
+#include<bits/stdc++.h>
 
+#define endl '\n';
 using namespace std;
-// Gera uma permutação pseudoaleatória dos números de 0 até n-1 com base em uma chave de 10 bits
-bitset<10> gerarPermutacaoComChave(bitset<10> chave10bits) {
-    return 0;    
+vector<int> maskten = {2,4,1,6,3,9,0,8,7,5}; 
+vector<int> maskeight = {5,2,6,3,7,4,9,8}; 
+
+bitset<10> permutacao10(bitset<10> chave) {
+    bitset<10> newkey;
+    for(int i = 0;i<10;i++)
+    {
+        int value = maskten[i];
+        
+        newkey[i] = chave[value]; 
+    }
+    cout<<"Permutação 10" << newkey<<endl;
+    return newkey;    
 }
 
-// Divide a chave de 10 bits em duas metades (5 bits) e rotaciona cada uma
+bitset<10> permutacao8(bitset<10> chave) {
+    bitset<10> newkey = chave;
+    for(int i = 0;i<10;i++)
+    {
+        int value = maskeight[i];
+        
+        newkey[i] = chave[value]; 
+    }
+    cout<<"Permutação 8" << newkey<<endl;
+    return newkey;    
+}
 bitset<10> deslocarCircularMetades(bitset<10> chave10bits, int rotacoes = 1) {
     bitset<5> left;
     bitset<5> right;
@@ -27,23 +45,27 @@ bitset<10> deslocarCircularMetades(bitset<10> chave10bits, int rotacoes = 1) {
         right_shifted[(i + rotacoes) % 5] = right[i];
     }
 
-    cout << left_shifted << endl;
-    cout << right_shifted << endl;
+    //cout << left_shifted << endl;
+    //cout << right_shifted << endl;
 
     bitset<10> ans;
     for(int i = 0; i < 5; i++){
         ans[i] = right_shifted[i];
         ans[i + 5] = left_shifted[i];
     }
-    cout << ans << endl;
+    //cout << ans << endl;
 
     return ans;
 }
 
-bitset<10> permutar8bits(bitset<10> chave10bits){
-    return 0;
-}
 
-bitset<10> gerarChaveAleatoria(int chave) {
-    return permutar8bits(deslocarCircularMetades(gerarPermutacaoComChave(chave)));
+pair<bitset<10>,bitset<10>> gerarChaveAleatoria(bitset<10> chave) {
+    
+    bitset<10> permutado10 = permutacao10(chave);
+    bitset<10> deslocado = deslocarCircularMetades(chave);
+    bitset<10> k1 = permutacao8(deslocado);
+    cout<<"k1 = "<<k1<<endl; 
+    deslocado = deslocarCircularMetades(k1,2);
+    bitset<10> k2 = permutacao8(deslocado);
+    return {k1,k2};
 }

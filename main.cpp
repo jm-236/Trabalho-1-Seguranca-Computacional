@@ -4,9 +4,11 @@
 using namespace std;
 
 int main() {
-    bitset<10> chave_1 = 0b1000001101; // Exemplo de chave de 10 bits
+    bitset<10> chave_1 = 0b1010000010; // Exemplo de chave de 10 bits
     
-    deslocarCircularMetades(chave_1);
+    gerarChaveAleatoria(chave_1);
     
     return 0;
 }
+
+
