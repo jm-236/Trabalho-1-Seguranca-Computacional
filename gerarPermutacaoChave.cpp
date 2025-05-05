@@ -1,10 +1,17 @@
+/**
+ * Códigos referentes ao processo de geração de sub-chaves a partir da chave principal.
+ */
 #include<bits/stdc++.h>
-
 #define endl '\n';
 using namespace std;
-vector<int> maskten = {2,4,1,6,3,9,0,8,7,5}; 
+
+// nova ordem dos bits na permutação P10
+vector<int> maskten = {2,4,1,6,3,9,0,8,7,5};
+
+// Nova ordem dos bits na permutação P8
 vector<int> maskeight = {5,2,6,3,7,4,9,8}; 
 
+// Função que recebe um bitset de tamanho 10, permuta os 10 bits dele e retorna o bitset permutado
 bitset<10> permutacao10(bitset<10> chave) {
     bitset<10> newkey;
     for(int i = 0;i<10;i++)
@@ -17,6 +24,7 @@ bitset<10> permutacao10(bitset<10> chave) {
     return newkey;    
 }
 
+// Função que recebe um bitset de tamanho 10, permuta 8 desses 10 bits e retorna o bitset permutado
 bitset<10> permutacao8(bitset<10> chave) {
     bitset<10> newkey = chave;
     for(int i = 0;i<10;i++)
@@ -25,9 +33,11 @@ bitset<10> permutacao8(bitset<10> chave) {
         
         newkey[i] = chave[value]; 
     }
-    cout<<"Permutação 8" << newkey<<endl;
+    // cout<<"Permutação 8" << newkey<<endl;
     return newkey;    
 }
+
+// Função que recebe um bitset de 10 bits, divide ele em dois bitsets de 5 bits, e aplica um deslocamento para a esquerda em ambos os bitsets, agrupa os dois bitsets e retorna um bitset de tamanho 10 com os bits deslocados
 bitset<10> deslocarCircularMetades(bitset<10> chave10bits, int rotacoes = 1) {
     bitset<5> left;
     bitset<5> right;
@@ -58,7 +68,7 @@ bitset<10> deslocarCircularMetades(bitset<10> chave10bits, int rotacoes = 1) {
     return ans;
 }
 
-
+// Função que gera as chaves k1 e k2 a partir da chave principal, utilizando funções de permutação e deslocamento
 pair<bitset<10>,bitset<10>> gerarChaveAleatoria(bitset<10> chave) {
     
     bitset<10> permutado10 = permutacao10(chave);
