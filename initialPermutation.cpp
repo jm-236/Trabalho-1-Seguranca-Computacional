@@ -13,7 +13,7 @@ bitset<8> initial_permutation(bitset<8> message){
 
     for (int i = 7; i >= 0; i--){
         int index = initial_order[7 - i];
-        cout<<i<< " "<<index<<" "<<message[index]<< endl;
+        // cout<<i<< " "<<index<<" "<<message[index]<< endl;
         novaMensagem[i] = message[7 - index];
     }
 
