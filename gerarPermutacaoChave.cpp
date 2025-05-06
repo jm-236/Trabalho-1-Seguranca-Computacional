@@ -31,14 +31,14 @@ bitset<8> permutacao8(bitset<10> chave) {
     {
         int value = maskeight[i];
         newkey[i] = chave[value]; 
-        cout<<i<<" "<<value<<" "<< chave[value]<<endl; 
+        // cout<<i<<" "<<value<<" "<< chave[value]<<endl; 
     }
     // cout<<"Permutação 8" << newkey<<endl;
     return newkey;    
 }
 // Função que recebe um bitset de 10 bits, divide ele em dois bitsets de 5 bits, e aplica um deslocamento para a esquerda em ambos os bitsets, agrupa os dois bitsets e retorna um bitset de tamanho 10 com os bits deslocados
 bitset<10> deslocarCircularMetades(bitset<10> chave10bits, int rotacoes = 1) {
-    rotacoes = 5- rotacoes;
+    rotacoes = 5 - rotacoes;
     //Bitset usa msb em vez de lsb, então temos que rotacionar na direção contraria
     bitset<5> left;
     bitset<5> right;
@@ -58,8 +58,8 @@ bitset<10> deslocarCircularMetades(bitset<10> chave10bits, int rotacoes = 1) {
         right_shifted[(i + rotacoes) % 5] = right[i];
     }
 
-    cout << "Left_Shifted = "<< left_shifted << endl;
-    cout << "Right_Shifted = " << right_shifted << endl;
+    // cout << "Left_Shifted = "<< left_shifted << endl;
+    // cout << "Right_Shifted = " << right_shifted << endl;
 
     bitset<10> ans;
     for(int i = 0; i < 5; i++){
@@ -81,8 +81,8 @@ bitset<8> deslocarCircularMetades8(bitset<8> chave8bits, int rotacoes = 1) {
         left[i] = chave8bits[i + 4];
         right[i] = chave8bits[i];
     }
-    cout<<"Left = "<<left<<endl;
-    cout<<"Right = "<<right<<endl;
+    // cout<<"Left = "<<left<<endl;
+    // cout<<"Right = "<<right<<endl;
 
     bitset<4> left_shifted;
     bitset<4> right_shifted;
