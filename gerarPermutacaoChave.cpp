@@ -42,13 +42,13 @@ bitset<10> deslocarCircularMetades(bitset<10> chave10bits, int rotacoes = 1) {
     //Bitset usa msb em vez de lsb, então temos que rotacionar na direção contraria
     bitset<5> left;
     bitset<5> right;
-    cout<<"Chave entrando no deslocamento:"<<chave10bits<<endl;
+    //cout<<"Chave entrando no deslocamento:"<<chave10bits<<endl;
     for(int i = 0; i < 5; i++){
         left[i] = chave10bits[i + 5];
         right[i] = chave10bits[i];
     }
-    cout<<"Left = "<<left<<endl;
-    cout<<"Right = "<<right<<endl;
+    //cout<<"Left = "<<left<<endl;
+    //cout<<"Right = "<<right<<endl;
 
     bitset<5> left_shifted;
     bitset<5> right_shifted;
@@ -76,7 +76,7 @@ bitset<8> deslocarCircularMetades8(bitset<8> chave8bits, int rotacoes = 1) {
     //Bitset usa msb em vez de lsb, então temos que rotacionar na direção contraria
     bitset<4> left;
     bitset<4> right;
-    cout<<"Chave entrando no deslocamento:"<<chave8bits<<endl;
+    //cout<<"Chave entrando no deslocamento:"<<chave8bits<<endl;
     for(int i = 0; i < 4; i++){
         left[i] = chave8bits[i + 4];
         right[i] = chave8bits[i];
@@ -92,8 +92,8 @@ bitset<8> deslocarCircularMetades8(bitset<8> chave8bits, int rotacoes = 1) {
         right_shifted[(i + rotacoes) % 4] = right[i];
     }
 
-    cout << "Left_Shifted = "<< left_shifted << endl;
-    cout << "Right_Shifted = " << right_shifted << endl;
+    //cout << "Left_Shifted = "<< left_shifted << endl;
+    //cout << "Right_Shifted = " << right_shifted << endl;
 
     bitset<8> ans;
     for(int i = 0; i < 4; i++){
