@@ -13,9 +13,9 @@ pair<bitset<4>, bitset<4>> dividirMensagem(bitset<8> message){
         right[i] = message[i];
         left[i] = message[i + 4];
     }
-    cout << endl;
-    cout << left << endl;
-    cout << right << endl;
+    //cout << endl;
+    //cout << left << endl;
+    //cout << right << endl;
 
     return {left,right};
 }
