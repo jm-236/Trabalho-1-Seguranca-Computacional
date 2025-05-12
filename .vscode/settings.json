@@ -82,5 +82,6 @@
         "valarray": "cpp",
         "variant": "cpp",
         "aplicaxor": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

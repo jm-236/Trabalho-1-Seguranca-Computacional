@@ -8,8 +8,6 @@
 using namespace std;
 
 int main() {
-    string Hello_World = "Hello, World";
-    cout<<Hello_World<<endl;
     bitset<10> chave_0 = 0b1010000010; // Exemplo de chave de 10 bits
     
     // geração de k1 e k2
@@ -18,7 +16,8 @@ int main() {
     bitset<8> chave_2 = chaves.second;
     cout<<"Chave k1 = "<<chave_1<<endl;
     cout<<"Chave k2 = "<<chave_2<<endl;
-    bitset<8> mensagem = 0b01110010;
+    bitset<8> mensagem = 0b11010111;
+    cout << "Mensagem  original: " << mensagem << endl;
     bitset<8> mensagemPermutada = initial_permutation(mensagem);
     cout << "Mensagem permutada: " << mensagemPermutada << endl;
 
