@@ -7,7 +7,7 @@ vector<int> initial_order = {1,5,2,0,3,7,4,6}
 ;
 // Função que recebe a mensagem inicial de 8 bits e retorna a mensagem permutada
 bitset<8> initial_permutation(bitset<8> message){
-
+    cout << '\n' << "-----------INITIAL PERMUTATION-----------" << endl;
     bitset<8> novaMensagem;
 
     for (int i = 7; i >= 0; i--){

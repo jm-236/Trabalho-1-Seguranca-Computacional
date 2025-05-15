@@ -85,6 +85,7 @@ bitset<8> expand(bitset<4> left){
 
 // Função que executa uma rodada do proceso de FEistel, processando a parte direita da mensagem
 bitset<4> functionF(bitset<4> left, bitset<8>chave){
+    cout << '\n' << "-----------FUNÇÃO F-----------" << endl;
 
     bitset<8> leftexpanded = expand(left);
     cout << "key: " << chave << endl;

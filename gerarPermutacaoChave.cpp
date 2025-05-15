@@ -12,6 +12,7 @@ vector<int> maskeight = {5,2,6,3,7,4,9,8};
 
 // Função que recebe um bitset de tamanho 10, permuta os 10 bits dele e retorna o bitset permutado
 bitset<10> permutacao10(bitset<10> chave) {
+
     bitset<10> newkey;
     for(int i = 0;i<10;i++)
     {
@@ -107,6 +108,8 @@ bitset<8> deslocarCircularMetades8(bitset<8> chave8bits, int rotacoes = 1) {
 
 // Função que gera as chaves k1 e k2 a partir da chave principal, utilizando funções de permutação e desloc amento
 pair<bitset<8>,bitset<8>> gerarChaveAleatoria(bitset<10> chave) {
+
+    cout << '\n' << "------------GERAÇÃO DE CHAVES----------------" << endl;
     cout<<"K = "<<chave<<endl;  
     bitset<10> permutado10 = permutacao10(chave);
     cout<<"permutado10 = "<<permutado10<<endl;

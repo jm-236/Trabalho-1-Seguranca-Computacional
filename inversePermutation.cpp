@@ -7,6 +7,7 @@ vector<int> inverse_order ={3,0,2,4,6,1,7,5};
 
 // Função que recebe a mensagem inicial de 8 bits e retorna a mensagem permutada
 bitset<8> inversePermutation(bitset<8> message){
+    cout << '\n' << "-----------INVERSE PERMUTATION-----------" << endl;
 
     bitset<8> novaMensagem;
 
