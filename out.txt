@@ -1,0 +1,204 @@
+
+------------GERAÇÃO DE CHAVES----------------
+K = 1010000010
+permutado10 = 0011000001
+Deslocado = 0001110000
+k1 = 00100101
+Deslocado 2 = 1100000100
+k2 = 11000010
+
+-----------CRIPTAÇÃO-----------
+-----------ALGORITMO S-DES-----------
+Chave k1 = 00100101
+Chave k2 = 11000010
+Mensagem  original: 11010111
+
+-----------INITIAL PERMUTATION-----------
+Mensagem permutada: 11011101
+Mensagem dividida: (1101,1101)
+
+-----------FUNÇÃO F-----------
+key: 00100101
+ep = 11010111
+Apos xor 1: 11110010
+P4 = 1111 S0S1 = 1111
+Fazer xor de : 1101 Com 1111
+Apos xor : 0010
+Round1 : 11010010
+Mensagem dividida round 2: (1101,0010)
+
+-----------FUNÇÃO F-----------
+key: 11000010
+ep = 00101000
+Apos xor 1: 11101010
+P4 = 1110 S0S1 = 1110
+Fazer xor de : 1101 Com 1110
+Apos xor : 0011
+Round2 : 00110010
+
+-----------INVERSE PERMUTATION-----------
+Texto após S-DES: 10101000
+MEnsagem apos sdes: 10101000
+
+----------DECRIPTAÇÃO-----------
+-----------ALGORITMO S-DES-----------
+Chave k1 = 11000010
+Chave k2 = 00100101
+Mensagem  original: 10101000
+
+-----------INITIAL PERMUTATION-----------
+Mensagem permutada: 00110010
+Mensagem dividida: (0011,0010)
+
+-----------FUNÇÃO F-----------
+key: 11000010
+ep = 00101000
+Apos xor 1: 11101010
+P4 = 1110 S0S1 = 1110
+Fazer xor de : 0011 Com 1110
+Apos xor : 1101
+Round1 : 00101101
+Mensagem dividida round 2: (0010,1101)
+
+-----------FUNÇÃO F-----------
+key: 00100101
+ep = 11010111
+Apos xor 1: 11110010
+P4 = 1111 S0S1 = 1111
+Fazer xor de : 0010 Com 1111
+Apos xor : 1101
+Round2 : 11011101
+
+-----------INVERSE PERMUTATION-----------
+Texto após S-DES: 11010111
+Mensagem descriptografada: 11010111
+
+------------GERAÇÃO DE CHAVES----------------
+K = 1010000010
+permutado10 = 0011000001
+Deslocado = 0001110000
+k1 = 00100101
+Deslocado 2 = 1100000100
+k2 = 11000010
+-----------ALGORITMO S-DES-----------
+Chave k1 = 00100101
+Chave k2 = 11000010
+Mensagem  original: 11010111
+
+-----------INITIAL PERMUTATION-----------
+Mensagem permutada: 11011101
+Mensagem dividida: (1101,1101)
+
+-----------FUNÇÃO F-----------
+key: 00100101
+ep = 11010111
+Apos xor 1: 11110010
+P4 = 1111 S0S1 = 1111
+Fazer xor de : 1101 Com 1111
+Apos xor : 0010
+Round1 : 11010010
+Mensagem dividida round 2: (1101,0010)
+
+-----------FUNÇÃO F-----------
+key: 11000010
+ep = 00101000
+Apos xor 1: 11101010
+P4 = 1110 S0S1 = 1110
+Fazer xor de : 1101 Com 1110
+Apos xor : 0011
+Round2 : 00110010
+
+-----------INVERSE PERMUTATION-----------
+Texto após S-DES: 10101000
+10101000 -----------ALGORITMO S-DES-----------
+Chave k1 = 00100101
+Chave k2 = 11000010
+Mensagem  original: 01101100
+
+-----------INITIAL PERMUTATION-----------
+Mensagem permutada: 11100010
+Mensagem dividida: (1110,0010)
+
+-----------FUNÇÃO F-----------
+key: 00100101
+ep = 00101000
+Apos xor 1: 00001101
+P4 = 1000 S0S1 = 0010
+Fazer xor de : 1110 Com 1000
+Apos xor : 0110
+Round1 : 00100110
+Mensagem dividida round 2: (0010,0110)
+
+-----------FUNÇÃO F-----------
+key: 11000010
+ep = 00111100
+Apos xor 1: 11111110
+P4 = 0110 S0S1 = 1100
+Fazer xor de : 0010 Com 0110
+Apos xor : 0100
+Round2 : 01000110
+
+-----------INVERSE PERMUTATION-----------
+Texto após S-DES: 00001101
+00001101 -----------ALGORITMO S-DES-----------
+Chave k1 = 00100101
+Chave k2 = 11000010
+Mensagem  original: 10111010
+
+-----------INITIAL PERMUTATION-----------
+Mensagem permutada: 00111011
+Mensagem dividida: (0011,1011)
+
+-----------FUNÇÃO F-----------
+key: 00100101
+ep = 11101011
+Apos xor 1: 11001110
+P4 = 0000 S0S1 = 0000
+Fazer xor de : 0011 Com 0000
+Apos xor : 0011
+Round1 : 10110011
+Mensagem dividida round 2: (1011,0011)
+
+-----------FUNÇÃO F-----------
+key: 11000010
+ep = 01101001
+Apos xor 1: 10101011
+P4 = 1101 S0S1 = 1011
+Fazer xor de : 1011 Com 1101
+Apos xor : 0110
+Round2 : 01100011
+
+-----------INVERSE PERMUTATION-----------
+Texto após S-DES: 00101110
+00101110 -----------ALGORITMO S-DES-----------
+Chave k1 = 00100101
+Chave k2 = 11000010
+Mensagem  original: 11110000
+
+-----------INITIAL PERMUTATION-----------
+Mensagem permutada: 10111000
+Mensagem dividida: (1011,1000)
+
+-----------FUNÇÃO F-----------
+key: 00100101
+ep = 10000010
+Apos xor 1: 10100111
+P4 = 1101 S0S1 = 1011
+Fazer xor de : 1011 Com 1101
+Apos xor : 0110
+Round1 : 10000110
+Mensagem dividida round 2: (1000,0110)
+
+-----------FUNÇÃO F-----------
+key: 11000010
+ep = 00111100
+Apos xor 1: 11111110
+P4 = 0110 S0S1 = 1100
+Fazer xor de : 1000 Com 0110
+Apos xor : 1110
+Round2 : 11100110
+
+-----------INVERSE PERMUTATION-----------
+Texto após S-DES: 01101101
+01101101 
+Apos ebc: 10101000 00001101 00101110 01101101 

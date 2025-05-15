@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run C++",
+            "type": "shell",
+            "command": "g++", // Caminho para o compilador g++
+            "args": [
+                "main.cpp",  // Nome do seu arquivo fonte C++
+                "&&",                // Executa o próximo comando após a compilação
+                "./a.out",         // Executa o programa gerado
+                ">",                 // Redireciona a saída para o arquivo
+                "out.txt"            // Nome do arquivo de saída
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        }
+    ]
+}
