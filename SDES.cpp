@@ -41,6 +41,6 @@ bitset<8> SDES(bitset<8> mensagem, pair<bitset<8>,bitset<8>> chaves){
     cout<<"Round2 : "<<round2<<endl;
 
     bitset<8> inverse_permutated = inversePermutation(round2);
-    cout<<"Texto encriptado: "<<inverse_permutated<<endl;
+    cout<<"Texto após S-DES: "<<inverse_permutated<<endl;
     return inverse_permutated;
 }
