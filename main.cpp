@@ -23,6 +23,8 @@ int main() {
     bitset<8> mensagem_decriptada = SDES(mensagem_encriptada, {chaves.second, chaves.first}); // inverte a chaves para descriptografar
     cout << "Mensagem descriptografada: " << mensagem_decriptada << endl;
 
+    cout << '\n' << "----------EBC-----------" << endl;
+    cout << "Entrada: 0b11010111011011001011101011110000" << endl;
     vector<bitset<8>> temp = ebc(0b11010111011011001011101011110000,gerarChaveAleatoria(0b1010000010));
     cout<<"Apos ebc: ";
     for(auto a:temp)
@@ -31,6 +33,8 @@ int main() {
     }
     cout<<endl;
 
+    cout << '\n' << "----------CBC-----------" << endl;
+    cout << "Entrada: 0b11010111011011001011101011110000" << endl;
     temp = cbc(0b11010111011011001011101011110000,gerarChaveAleatoria(0b1010000010));
     cout<<"Apos cbc: ";
     for(auto a:temp)
